@@ -36,6 +36,8 @@ public class _5_Method {
         //int result=  voidsizParametresiz();
         //System.out.println("Sonuç: "+result);
 
+        double result2=  voidsizParametreli(9);
+        System.out.println(result2);
     }
 
 }
