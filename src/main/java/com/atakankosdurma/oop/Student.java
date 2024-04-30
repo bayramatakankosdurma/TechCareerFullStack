@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Student {
 
-    private Long studentId;
+    private Long id;
     private String studentName;
     private String studentSurname;
     private Date createdDate;
@@ -13,7 +13,7 @@ public class Student {
     //POJO
     //POJO + Constructor
     public Student(){
-        studentId=0L;
+        id=0L;
         this.studentName="Adınızı girmediniz";
         this.studentSurname="Soyadınızı girmediniz";
         createdDate= new Date(System.currentTimeMillis());
@@ -22,7 +22,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
+                "studentId=" + id +
                 ", studentName='" + studentName + '\'' +
                 ", studentSurname='" + studentSurname + '\'' +
                 ", createdDate=" + createdDate +
@@ -31,28 +31,28 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return Objects.hash(studentId, studentName, studentSurname, createdDate);
+        return Objects.hash(id, studentName, studentSurname, createdDate);
     }
 
     public String fullName(){
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(studentId).append(" ").append(studentName).append(" ").append(this.studentSurname);
+        stringBuilder.append(id).append(" ").append(studentName).append(" ").append(this.studentSurname);
         String change=stringBuilder.toString();
         return change;
     }
 
     public Student(Long studentId, String studentName, String studentSurname){
         this.studentSurname = studentSurname;
-        this.studentId = studentId;
+        this.id = studentId;
         this.studentName = studentName;
     }
 
     public Long getStudentId() {
-        return studentId;
+        return id;
     }
 
-    public void setStudentId(Long studentId) {
-        this.studentId = studentId;
+    public void setId(Long studentId) {
+        this.id = studentId;
     }
 
     public Date getCreatedDate() {
